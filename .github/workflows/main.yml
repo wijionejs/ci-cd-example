@@ -1,15 +1,15 @@
 name: CI
 on:
-  push: 
-    branches: [ master ] 
-  pull_request: 
-    branches: [ master ]
+	push: 
+		branches: [ master ] 
+	pull_request: 
+		branches: [ master ]
 jobs:
-  init:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 17.x ]
+	init:
+		runs-on: ubuntu-latest
+		strategy:
+			matrix:
+				node-version: [ 17.x ]
     steps:
 			- uses: actions/checkout@v3
 			- name: Starting Node.js ${{ matrix.node-version }}
